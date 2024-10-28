@@ -1,9 +1,14 @@
 
  - start kamailio
-   docker rm -f kamailio ; docker run --net=host --name kamailio -v .:/etc/kamailio   kamailio/kamailio-ci
+   
+   docker run --net=host --name kamailio_tmp_topoh -v .:/etc/kamailio   kamailio/kamailio-ci
+
  - start uas
+   
    ./uas.sh
+   
  - start uac
+   
    ./uac.sh
 
 ## WITH topoh
